@@ -9,35 +9,25 @@ shinyUI(fluidPage(
   useShinyjs(),
   
   tags$head(
-    tags$link(rel = 'stylesheet', type = 'text/css', href = 'styles.css'),
-    tags$link(rel = 'icon', href = 'fliptrans.png'),
-    tags$link(rel = 'stylesheet', href = 'https://fonts.googleapis.com/css?family=Roboto+Mono'),
-    tags$link(rel = 'stylesheet', href = 'https://fonts.googleapis.com/css?family=Inter')
+    title = "Flipside Data Science",
+    tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
+    tags$link(rel = "stylesheet", href = "https://fonts.googleapis.com/css?family=Questrial"),
+    tags$link(rel = "stylesheet", href = "https://fonts.googleapis.com/css?family=Inter")
   ),
-  tags$head(tags$script(src = 'rudderstack.js')),
-  tags$style(type='text/css',
-             '.shiny-output-error { visibility: hidden; }',
-             '.shiny-output-error:before { visibility: hidden; }'
-  ),
-  
   withTags({
-    header(class='top-banner',
+    header(class="top-banner",
            section(
-             a(class='fs-logo', href='https://www.flipsidecrypto.com', 
-               'Powered by Flipside Crypto', onclick = 'rudderstack.track("ntr-click-flipside-icon")'),
-             section(class='socials',
-                     a(class='twitter', href='https://twitter.com/flipsidecrypto',
-                       'Twitter', onclick = 'rudderstack.track("ntr-click-twitter-icon")'),
-                     a(class='linkedin', href='https://www.linkedin.com/company/flipside-crypto',
-                       'LinkedIn', onclick = 'rudderstack.track("ntr-click-linkedin-icon")'),
-                     a(class='discord', href='https://flipsidecrypto.com/discord',
-                       'Discord', onclick = 'rudderstack.track("ntr-click-discord-icon")'),
-                     a(href='https://app.flipsidecrypto.com/auth/signup/', # redirects to xyz signup
-                       'Sign Up', onclick = 'rudderstack.track("ntr-click-signup-icon")')
+             a(class="fs-logo", href="https://www.flipsidecrypto.com", img(src = "FLIPSIDE-BRAND-1-WHITE.png", width = "75%")),
+             section(class="socials",
+                     a(class="twitter", target = "_blank", href="https://twitter.com/flipsidecrypto", "Twitter"),
+                     a(class="linkedin", target = "_blank", href="https://www.linkedin.com/company/flipside-crypto", "LinkedIn"),
+                     a(class="discord", target = "_blank", href="https://flipsidecrypto.com/discord", "Discord"),
+                     a(href="https://next.flipsidecrypto.xyz/", target = "_blank", "Explore our data!")
              )
            )
     )
   }),
+  hr(class = "break-line"),
   
   # APP LABEL HERE -----------------------------------  
   
